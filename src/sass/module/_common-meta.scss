@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.common-meta__info {
+  display: flex;
+  align-items: center;
+  gap: remf(27);
+}
+
+.common-meta__date {
+  min-width: remf(80);
+  flex-shrink: 0;
+  letter-spacing: remf(0.4);
+}
+
+.common-meta__category {
+  font-size: remf(16);
+  font-weight: $regular;
+  padding: remf(8) remf(20);
+  border: 1px solid $white;
+  letter-spacing: remf(2);
+  flex-shrink: 0;
+  @include mq(md) {
+    font-weight: $medium;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.philosophy-list {
+  display: grid;
+  row-gap: remf(30);
+}
+
+.philosophy-list .common__item {
+  @include mq(md) {
+    display: flex;
+    // justify-content: space-between;
+  }
+}
+
+.common__item:nth-of-type(even) {
+  @include mq(md) {
+    flex-direction: row-reverse;
+    .common__item-img {
+      margin: 0 0 0 remf(31);
+    }
+  }
+}

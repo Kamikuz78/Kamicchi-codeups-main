@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.single-body-layout {
+  margin-top: remf(76);
+  @include mq(md) {
+    margin-top: remf(88);
+  }
+}

@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.contact {
+  background-color: #3d3d3d;
+  padding: remf(73) 0 remf(64);
+  @include mq(md) {
+    padding: remf(154) 0 remf(149);
+  }
+}
+
+.contact__header {
+  position: relative;
+  z-index: 1;
+}
+
+.contact__subtitle {
+  top: remf(-42);
+  @include mq(md) {
+    top: remf(-72);
+  }
+}
+
+.contact__inner {
+  align-items: center;
+}
+
+.contact__text {
+  margin-top: remf(23);
+  letter-spacing: calc(2 / 16) * 1em;
+  line-height: calc(23.17 / 16);
+  @include mq(md) {
+    margin-top: remf(24);
+    text-align: center;
+  }
+}
+
+.contact__text.contact__text--sub {
+  @include mq(md) {
+    margin-top: remf(31);
+  }
+}
+
+.contact__button-wrapper {
+  text-align: center;
+  margin-top: remf(47);
+  @include mq(md) {
+    margin-top: remf(60);
+  }
+}
+
+.contact__button-wrapper.contact__button-wrapper--sub {
+  margin-top: remf(43);
+  @include mq(md) {
+    margin-top: remf(54);
+  }
+}

@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.sub-blog__items {
+  @include mq(md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}

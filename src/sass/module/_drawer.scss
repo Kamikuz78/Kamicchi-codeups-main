@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.drawer.is-active {
+  display: block;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.drawer__items {
+  padding: remf(193) 0;
+  overflow: scroll;
+  height: 100%;
+}
+
+.drawer__item {
+  width: 100%;
+}
+
+.drawer__item a {
+  display: block;
+  text-align: center;
+  padding: remf(16) 0;
+  height: inherit;
+  font-weight: $regular;
+  letter-spacing: calc(2 / 16) * 1em;
+  line-height: calc(23 / 16);
+}

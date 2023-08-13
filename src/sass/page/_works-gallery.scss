@@ -1,0 +1,111 @@
+@use "global" as *;
+
+.works-gallery__body {
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  width: inherit;
+  @include mq(md) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+  }
+}
+//メインスライド
+.works-gallery__slider {
+  height: auto;
+  // margin: 0 0 10px 0;
+  @include mq(md) {
+    width: remf(800);
+  }
+
+  .swiper-slide {
+    width: 100%;
+    @include mq(md) {
+      height: remf(427);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 375 / 250;
+      margin: 0 auto;
+      @include mq(md) {
+        aspect-ratio: 800 / 427;
+      }
+    }
+  }
+}
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
+//サムネイルスライド
+.works-gallery__thumbs {
+  display: block;
+  height: auto;
+  width: 100%;
+  padding: 0;
+  margin-top: remf(32);
+  overflow: hidden;
+  @include mq(md) {
+    margin-top: remf(40);
+  }
+
+  .swiper-slide {
+    width: remf(163);
+    aspect-ratio: 163/163;
+    object-fit: cover;
+    flex-shrink: 0;
+    text-align: center;
+    overflow: hidden;
+    opacity: 0.5;
+    @include mq(md) {
+      width: remf(93);
+      height: remf(93);
+    }
+  }
+
+  .swiper-slide-active {
+    opacity: 1;
+    flex-shrink: 0;
+  }
+}
+
+.works-gallery__thumbs .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 163/163;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 93/93;
+  }
+}
+
+.works-gallery__prev-button,
+.works-gallery__next-button {
+  width: remf(50);
+  height: remf(50);
+}
+
+.gallery__prev-button {
+  margin-left: remf(7);
+}
+
+// .works-gallery__prev-button.swiper-button-prev::after,
+// .works-gallery__next-button.swiper-button-next::after {
+.works-gallery__prev-button::after,
+.works-gallery__next-button::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 50px;
+  width: 50px;
+  margin: auto;
+}
+.works-gallery__prev-button::after {
+  background-image: url(%3Csvg+xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22+width%3D%2250%22+height%3D%2250%22+viewBox%3D%220+0+50+50%22+fill%3D%22none%22%3E%0D%0A++++++++++++++%3Ccircle+cx%3D%2225%22+cy%3D%2225%22+r%3D%2225%22+transform%3D%22rotate%28-180+25+25%29%22+fill%3D%22%23111111%22+%2F%3E%0D%0A++++++++++++++%3Cpath+d%3D%22M31+38L18+24.5L31+11%22+stroke%3D%22%23FFEA2E%22+stroke-width%3D%223%22+stroke-linecap%3D%22round%22%0D%0A++++++++++++++++stroke-linejoin%3D%22round%22+%2F%3E);
+  // width: 50px;
+}
+
+.gallery__next-button {
+  margin-right: remf(7);
+}

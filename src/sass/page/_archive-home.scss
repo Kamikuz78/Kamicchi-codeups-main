@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.archive-home {
+  margin-top: remf(84);
+  @include mq(md) {
+    margin-top: remf(69);
+  }
+}
+
+.archive-home__inner.inner {
+  max-width: remf(910);
+}
+
+.archive-home__items {
+  display: grid;
+  row-gap: remf(25);
+  @include mq(md) {
+    row-gap: remf(33);
+  }
+}
+
+/* カンプ指定ホバー（指示有れば切替可能） */
+// .archive-home {
+//   .news-content__text {
+//     transition: color 1s;
+//   }
+
+//   .news-content__text:hover {
+//     @include mq(md) {
+//       color: yellow;
+//       transition: color 0.5s;
+//     }
+//   }
+// }

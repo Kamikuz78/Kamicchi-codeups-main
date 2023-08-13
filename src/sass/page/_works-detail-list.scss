@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.works-detail-list {
+  display: flex;
+  flex-direction: column;
+  // column-gap: remf(48);
+  // column-gap: 48px;
+}

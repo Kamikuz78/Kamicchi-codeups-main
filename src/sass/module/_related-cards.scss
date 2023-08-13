@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.related-cards {
+  display: grid;
+  gap: remf(24) remf(25);
+  @include mq(md) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: remf(32) remf(32);
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}

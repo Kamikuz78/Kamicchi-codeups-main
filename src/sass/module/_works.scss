@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.works__subtitle {
+  top: remf(-41);
+  @include mq(md) {
+    top: remf(-34);
+  }
+}
+
+.works__header {
+  margin-left: auto;
+  margin-right: auto;
+}
+.works__body {
+  margin-top: remf(54);
+  // width: 100%;
+  @include mq(md) {
+    margin-top: remf(39);
+  }
+}
+
+.works__content {
+  width: 100%;
+  @include mq(md) {
+    padding: remf(80) 0;
+    background: linear-gradient(90deg, transparent 0% calc(50% - remf(256)), #333 calc(50% - remf(256)) 100vw);
+  }
+}
+
+// .works__content .common__item-img {
+//   @include mq(md) {
+//     margin: 0 0 0 remf(31);
+//   }
+// }

@@ -1,0 +1,81 @@
+@use "global" as *;
+
+.common-button {
+  text-align: center;
+  display: inline-block;
+  font-size: remf(20);
+  color: $white;
+  width: 100%;
+  background-color: $gray;
+  cursor: pointer;
+  letter-spacing: remf(2);
+  line-height: 1;
+  border: 1px solid $white;
+  padding: remf(14) remf(9);
+  position: relative;
+  z-index: 1;
+  @include mq(md) {
+    font-size: remf(16);
+    padding: remf(21) remf(9);
+    transition: 0.3s;
+    width: remf(360);
+  }
+}
+
+.common-button:hover {
+  color: $white;
+}
+
+.common-button::before {
+  @include mq(md) {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: $white;
+    transform-origin: 0% 50%;
+    transform: scaleX(0);
+    transition: transform ease-out 0.3s;
+  }
+}
+
+.common-button:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+
+.common-button--contact {
+  @include mq(md) {
+    font-size: remf(20);
+    letter-spacing: calc(2 / 20) * 1em;
+    padding: remf(19) remf(9);
+    width: remf(360);
+  }
+}
+
+.common-button--news {
+  @include mq(md) {
+    background-color: $white;
+    padding: remf(6) remf(10);
+    width: remf(134);
+    color: $black;
+    letter-spacing: normal;
+    align-self: flex-start;
+  }
+}
+
+.common-button--article {
+  font-size: remf(16);
+  padding: remf(11) remf(10);
+  width: 100%;
+}
+
+.blog-detail-article__inner {
+  margin-top: remf(32);
+  @include mq(md) {
+    margin-top: remf(80);
+  }
+}
