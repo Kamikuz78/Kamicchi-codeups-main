@@ -31,7 +31,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     //サムネイルスライド
     var sliderThumbnail = new Swiper ('.js-gallery-thumbs', {
       loop: true,
-      slidesPerView: 1.9,
+      slidesPerView: 2.1,
       slidePerGroup:3,
       spaceBetween: 24,
       breakpoints: {

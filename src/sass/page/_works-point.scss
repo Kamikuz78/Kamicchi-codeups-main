@@ -7,6 +7,9 @@
 
 .works-point + .works-point {
   margin-top: remf(56);
+  @include mq(md) {
+    margin-top: remf(72);
+  }
 }
 
 .works-point__title {
@@ -20,6 +23,9 @@
   top: 0;
   left: remf(-17);
   transform: translateY(-50%) translateX(1em);
+  @include mq(md) {
+    margin-left: remf(41);
+  }
 }
 
 .works-point__title h3 {
@@ -33,4 +39,7 @@
   padding: remf(56) remf(9) remf(31);
   letter-spacing: remf(0.4);
   line-height: remf(35);
+  @include mq(md) {
+    padding: remf(43) remf(23) remf(30);
+  }
 }
